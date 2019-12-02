@@ -19,7 +19,7 @@ namespace AdventOfCode.Solutions.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,7 +61,75 @@ namespace AdventOfCode.Solutions.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 104042
+        ///112116
+        ///57758
+        ///139018
+        ///105580
+        ///148312
+        ///139340
+        ///62939
+        ///50925
+        ///63881
+        ///138725
+        ///54735
+        ///54957
+        ///103075
+        ///55457
+        ///98808
+        ///87206
+        ///58868
+        ///120829
+        ///124551
+        ///63631
+        ///103358
+        ///149501
+        ///147414
+        ///59731
+        ///88284
+        ///59034
+        ///116206
+        ///52299
+        ///119619
+        ///63648
+        ///85456
+        ///110391
+        ///90254
+        ///99360
+        ///59529
+        ///82628
+        ///82693
+        ///64331
+        ///123779
+        ///123064
+        ///93600
+        ///104226
+        ///74068
+        ///74354
+        ///149707
+        ///51503
+        ///130433
+        ///80778
+        ///72279
+        ///148782
+        ///113454
+        ///138409
+        ///148891
+        ///79257
+        ///126927
+        ///141696
+        ///107136
+        ///66200
+        ///120929
+        ///149350
+        ///76952
+        ///134002
+        ///62354
+        ///144559
+        ///125186
+        ///85169
+        ///61662
+        ///902 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Day01 {
             get {
@@ -70,7 +138,7 @@ namespace AdventOfCode.Solutions.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 1,0,0,3,1,1,2,3,1,3,4,3,1,5,0,3,2,6,1,19,2,19,13,23,1,23,10,27,1,13,27,31,2,31,10,35,1,35,9,39,1,39,13,43,1,13,43,47,1,47,13,51,1,13,51,55,1,5,55,59,2,10,59,63,1,9,63,67,1,6,67,71,2,71,13,75,2,75,13,79,1,79,9,83,2,83,10,87,1,9,87,91,1,6,91,95,1,95,10,99,1,99,13,103,1,13,103,107,2,13,107,111,1,111,9,115,2,115,10,119,1,119,5,123,1,123,2,127,1,127,5,0,99,2,14,0,0.
         /// </summary>
         internal static string Day02 {
             get {

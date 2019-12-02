@@ -11,7 +11,10 @@
 
             foreach (ISolution solution in repository.GetAllSolutions())
             {
-                Console.WriteLine(solution);
+                if (!string.IsNullOrWhiteSpace(solution.Title))
+                {
+                    Console.WriteLine(solution);
+                }
             }
 
             Console.ReadLine();
