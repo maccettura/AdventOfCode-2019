@@ -1,75 +1,72 @@
 ﻿namespace AdventOfCode.Solutions.Day02
 {
     using System;
-    using System.Collections.Generic;
+    using System.Linq;
 
     public class Solution : BaseSolution
     {
-        private int[] puzzleInput;
-
         public Solution() : base(2, "1202 Program Alarm")
         {
-            // This code is very verbose to try and figure out the issue
-            List<int> list = new List<int>();
-            foreach (var s in GetResourceString().Split(','))
-            {
-                if (!int.TryParse(s, out int foo))
-                {
-                    Console.WriteLine("Whoops");
-                }
-                else
-                {
-                    list.Add(foo);
-                }
-            }
-
-            // 'list' is correct before running .ToArray(), after running .ToArray() it seems like all the other code runs even if breakpoints are set there
-            puzzleInput = list.ToArray();
         }
 
         public override string GetPart1Answer()
         {
-            puzzleInput[1] = 12;
-            puzzleInput[2] = 2;
-            RunProgram();
-            return puzzleInput[0].ToString();
+            return RunProgram(12, 2).ToString();
         }
 
         public override string GetPart2Answer()
         {
+            for (int noun = 0; noun < 99; noun++)
+            {
+                for (int verb = 0; verb < 99; verb++)
+                {
+                    if (RunProgram(noun, verb) == 19690720)
+                    {
+                        return $"{100 * noun + verb}";
+                    }
+                }
+            }
             return string.Empty;
         }
 
-        private void RunProgram()
+        private int RunProgram(int noun, int verb)
         {
+            var puzzleInput = GetResourceString().Split(',').Select(int.Parse).ToArray();
+            puzzleInput[1] = noun;
+            puzzleInput[2] = verb;
+
             int index = 0;
+            int opCode = 0;
+
             do
             {
-                int val = puzzleInput[index];
+                opCode = puzzleInput[index];
 
-                switch (val)
+                switch (opCode)
                 {
                     case 1:
-                        RunOpCode(index, (x, y) => x + y);
+                        RunOpCode(puzzleInput, index, (x, y) => x + y);
                         break;
 
                     case 2:
-                        RunOpCode(index, (x, y) => x * y);
+                        RunOpCode(puzzleInput, index, (x, y) => x * y);
                         break;
 
                     case 99:
-                        return;
+                        break;
 
                     default:
-                        throw new Exception();
+                        throw new Exception("Unexpected OpCode found");
                 }
 
                 index += 4;
             }
-            while (true);
+            while (opCode != 99);
+
+            return puzzleInput[0];
         }
 
-        private void RunOpCode(int index, Func<int, int, int> func)
+        private void RunOpCode(int[] puzzleInput, int index, Func<int, int, int> func)
         {
             var range = puzzleInput[new Range(index + 1, index + 3)];
 

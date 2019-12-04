@@ -14,41 +14,31 @@
 
         public override string GetPart1Answer()
         {
-            int total = puzzleInput.Sum(CalculateFuel);
+            int total = puzzleInput.Sum(FuelCalculation);
             return total.ToString();
         }
 
         public override string GetPart2Answer()
         {
-            int total = puzzleInput.Sum(CalculateFuelExtended);
+            int total = puzzleInput.Sum(ExtendedFuelCalculation);
             return total.ToString();
         }
 
-        private int CalculateFuelExtended(int input)
+        private int ExtendedFuelCalculation(int input)
         {
-            int totalFuel = 0;
-            int fuel = input;
+            int fuel = FuelCalculation(input);
 
-            bool doLoop = true;
-            do
+            if (fuel <= 0)
             {
-                int result = CalculateFuel(fuel);
-                if (result > 0)
-                {
-                    totalFuel += result;
-                    fuel = result;
-                }
-                else
-                {
-                    doLoop = false;
-                }
+                return 0;
             }
-            while (doLoop);
-
-            return totalFuel;
+            else
+            {
+                return fuel + ExtendedFuelCalculation(fuel);
+            }
         }
 
-        private int CalculateFuel(int input)
+        private int FuelCalculation(int input)
         {
             return input / 3 - 2;
         }
