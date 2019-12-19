@@ -1,8 +1,8 @@
-﻿namespace AdventOfCode.Solutions.Day02
-{
-    using System;
-    using System.Linq;
+﻿using System;
+using System.Linq;
 
+namespace AdventOfCode.Solutions.Day02
+{
     public class Solution : BaseSolution
     {
         public Solution() : base(2, "1202 Program Alarm")

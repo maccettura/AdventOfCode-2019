@@ -1,8 +1,9 @@
-﻿namespace AdventOfCode.Solutions
-{
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-    public class SolutionRepository
+namespace AdventOfCode.Solutions
+{
+    public static class SolutionRepository
     {
         private static readonly List<ISolution> AllSolutions = new List<ISolution>()
         {
@@ -33,12 +34,16 @@
             new Day25.Solution(),
         };
 
-        public ISolution GetSolutionByDay(int day)
+        public static ISolution GetSolutionByDay(int day)
         {
+            if (day > AllSolutions.Count || 0 >= day)
+            {
+                throw new ArgumentOutOfRangeException("'day' must be between 1 and 25");
+            }
             return AllSolutions[day - 1];
         }
 
-        public List<ISolution> GetAllSolutions()
+        public static List<ISolution> GetAllSolutions()
         {
             return AllSolutions;
         }

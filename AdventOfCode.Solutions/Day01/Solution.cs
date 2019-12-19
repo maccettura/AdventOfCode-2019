@@ -1,8 +1,8 @@
-﻿namespace AdventOfCode.Solutions.Day01
-{
-    using System;
-    using System.Linq;
+﻿using System;
+using System.Linq;
 
+namespace AdventOfCode.Solutions.Day01
+{
     public class Solution : BaseSolution
     {
         private readonly int[] puzzleInput;

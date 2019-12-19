@@ -1,7 +1,7 @@
-﻿namespace AdventOfCode.Solutions.Day21
-{
-    using System;
+﻿using System;
 
+namespace AdventOfCode.Solutions.Day21
+{
     public class Solution : BaseSolution
     {
         public Solution() : base(21, "")

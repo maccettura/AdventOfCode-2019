@@ -1,15 +1,13 @@
-﻿namespace AdventOfCode.SolutionRunner
-{
-    using System;
-    using Solutions;
+﻿using System;
+using AdventOfCode.Solutions;
 
+namespace AdventOfCode.SolutionRunner
+{
     internal class Program
     {
         private static void Main(string[] args)
         {
-            var repository = new SolutionRepository();
-
-            foreach (ISolution solution in repository.GetAllSolutions())
+            foreach (ISolution solution in SolutionRepository.GetAllSolutions())
             {
                 if (!string.IsNullOrWhiteSpace(solution.Title))
                 {
