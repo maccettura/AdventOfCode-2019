@@ -10,12 +10,12 @@ namespace AdventOfCode.Solutions.Day25
 
         public override string GetPart1Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
 
         public override string GetPart2Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,18 +4,18 @@ namespace AdventOfCode.Solutions.Day11
 {
     public class Solution : BaseSolution
     {
-        public Solution() : base(11, "")
+        public Solution() : base(11, "Space Police")
         {
         }
 
         public override string GetPart1Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
 
         public override string GetPart2Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
     }
 }

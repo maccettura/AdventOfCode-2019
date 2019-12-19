@@ -4,18 +4,18 @@ namespace AdventOfCode.Solutions.Day09
 {
     public class Solution : BaseSolution
     {
-        public Solution() : base(9, "")
+        public Solution() : base(9, "Sensor Boost")
         {
         }
 
         public override string GetPart1Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
 
         public override string GetPart2Answer()
         {
-            return string.Empty;
+            throw new NotImplementedException();
         }
     }
 }
